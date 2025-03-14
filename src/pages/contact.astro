@@ -4,15 +4,15 @@ import Icon from "@ui/icons/Icon.astro";
 import ContactForm from "@ui/forms/ContactForm.astro";
 import type { WithContext, Thing } from "schema-dts";
 
-const addressHeading = "Our address:";
-const emailHeading = "Contact us by email:";
-const knowledgeBaseHeading = "Knowledge base";
+const addressHeading = "Notre adresse:";
+const emailHeading = "Contactez nous par email:";
+// const knowledgeBaseHeading = "Knowledge base";
 
 const contactDetails = {
-  addressLine1: "1234 1st Ave Ste 300",
-  addressLine2: "Seattle, WA 98104, USA",
-  phone: "1 (833) 328-2669",
-  email: "info@datanova.com",
+  addressLine1: "53 Avenue De Paris",
+  addressLine2: "17210 Chevanceaux",
+  phone: "05 56 54 56 68",
+  email: "à remplir",
 };
 
 const knowledgeBaseDetails = {
@@ -22,14 +22,14 @@ const knowledgeBaseDetails = {
 };
 
 // Content for the page title and subtitle
-const title = "Contact us";
-const subTitle = "Questions, Comments or Feedback.";
+const title = "Contactez nous";
+const subTitle = "Questions, Commentaires ou Retour d'information.";
 
 // SEO metadata for the page
 const seo = {
-  title: "Contact DataNova",
+  title: "Contactez BeeComing",
   description:
-    "Get in touch with DataNova for inquiries, support, and feedback. Reach out via email, phone, or visit our office.",
+    "Contactez BeeComing pour toute demande de renseignements, d'assistance ou de commentaires. Contactez-nous par e-mail, par téléphone ou visitez nos bureaux.",
 };
 
 // Schema.org metadata for SEO
@@ -65,46 +65,19 @@ const schema: WithContext<Thing> = {
 
     <div class="grid grid-cols-1 gap-x-10 md:grid-cols-2 lg:gap-x-16">
       <div
-        class="mb-10 rounded-xl bg-teal-400 pb-10 md:order-2 md:mb-0 md:pb-0"
+        class="mb-10 rounded-xl bg-yellow-400 pb-10 md:order-2 md:mb-0 md:pb-0"
       >
         <ContactForm />
       </div>
 
-      <div class="space-y-14">
-        <div class="flex gap-x-5">
-          <Icon name="mapPin" />
-          <div class="grow">
-            <h4 class="font-semibold text-slate-600">{addressHeading}</h4>
-
-            <address class="mt-1 text-sm not-italic text-slate-500">
-              {contactDetails.addressLine1}
-              <br />
-              {contactDetails.addressLine2}
-            </address>
-          </div>
-        </div>
-
-        <div class="flex gap-x-5">
-          <Icon name="email" class="size-6 shrink-0 text-slate-600" />
-          <div class="grow">
-            <h4 class="font-semibold text-slate-600">{emailHeading}</h4>
-
-            <a
-              class="mt-1 text-sm text-slate-500 transition-colors duration-300 hover:text-slate-400 focus:text-slate-400 focus:outline-hidden"
-              href={`mailto:${contactDetails.email}`}
-            >
-              {contactDetails.email}
-            </a>
-          </div>
-        </div>
-
-        <div class="flex gap-x-5">
+      
+        {/*<div class="flex gap-x-5">
           <Icon name="info" class="size-6 shrink-0 text-slate-600" />
           <div class="grow">
-            <h4 class="font-semibold text-slate-600">{knowledgeBaseHeading}</h4>
+						<h4 class="font-semibold text-slate-600">{knowledgeBaseHeading}</h4>
             <p class="mt-1 text-sm text-slate-500">
               {knowledgeBaseDetails.description}
-            </p>
+						</p>
             <p class="mt-2">
               <a
                 class="group inline-flex items-center gap-x-2 text-sm font-medium text-slate-600 decoration-2 transition duration-300 hover:underline focus:underline focus:outline-hidden"
@@ -118,7 +91,7 @@ const schema: WithContext<Thing> = {
         </div>
       </div>
     </div>
-  </div>
+  </div>*/}
 
   <script>
     // Automatically adjusting the height of the textarea

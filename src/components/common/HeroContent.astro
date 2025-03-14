@@ -1,11 +1,12 @@
 ---
 import Button from "@ui/Button.astro";
+import { Image } from "astro:assets";
+import adminImage from "../../assets/images/Beevisiting - Administration.png"
+import mobileImage from "../../assets/images/Screenshot_2025-03-14-13-59-24-93_e3f67eec9fec57324aba7bab4c582db7.jpg"
 
-const title = "Turn Excel® into Your Data Intelligence Powerhouse";
-const subTitle =
-  "Get instant insights from your spreadsheets with advanced analytics and stunning visualizations. No coding required. Make confident decisions backed by data in minutes, not days.";
-const secondaryCTA = { text: "Start Free Trial", href: "https://github.com/mearashadowfax/DataNova" };
-const primaryCTA = { text: "View Pricing", href: "/downloads/license-options" };
+const title = "La solution digitale qui réinvente l'expérience de vos visites";
+const secondaryCTA = { text: "En savoir plus", href: "contact" };
+const primaryCTA = { text: "Voir le prix", href: "/downloads/license-options" };
 ---
 
 {/* Hero Content */}
@@ -17,12 +18,6 @@ const primaryCTA = { text: "View Pricing", href: "/downloads/license-options" };
   </h1>
 </div>
 
-<div class="mx-auto max-w-3xl text-left sm:text-center">
-  <p class="text-pretty text-lg text-slate-700">
-    {subTitle}
-  </p>
-</div>
-
 {/* CTA Buttons */}
 <div class="flex flex-col justify-center gap-5 sm:flex-row">
   <Button href={secondaryCTA.href} variant="secondary" target="_blank"
@@ -30,3 +25,22 @@ const primaryCTA = { text: "View Pricing", href: "/downloads/license-options" };
   >
   <Button href={primaryCTA.href} variant="primary">{primaryCTA.text}</Button>
 </div>
+<div class="relative mt-6 flex justify-center items-center">
+  <Image 
+    src={adminImage} 
+    alt="Beevisiting-Admin-login" 
+    width={500} 
+    height={300} 
+    class="rounded-lg shadow-lg"
+  /> 
+
+  <Image 
+    src={mobileImage} 
+    alt="Beevisiting-mobile" 
+    width={200} 
+    height={300} 
+    class="absolute translate-x-12 translate-y-8 sm:translate-x-50 sm:translate-y-20 z-10 rounded-lg shadow-lg"
+  /> 
+</div>
+
+

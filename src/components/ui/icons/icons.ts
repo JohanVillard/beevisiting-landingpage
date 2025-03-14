@@ -175,6 +175,74 @@ export const Icons = {
     strokeLinejoin: "round",
     stroke: "currentColor",
   },
+  qrCode: {
+    paths: [
+      {
+        d: "M5.25 4C4.56 4 4 4.56 4 5.25V8a1 1 0 0 1-2 0V5.25A3.25 3.25 0 0 1 5.25 2H8a1 1 0 0 1 0 2zm0 16C4.56 20 4 19.44 4 18.75V16a1 1 0 1 0-2 0v2.75A3.25 3.25 0 0 0 5.25 22H8a1 1 0 1 0 0-2zM20 5.25C20 4.56 19.44 4 18.75 4H16a1 1 0 1 1 0-2h2.75A3.25 3.25 0 0 1 22 5.25V8a1 1 0 1 1-2 0zM18.75 20c.69 0 1.25-.56 1.25-1.25V16a1 1 0 1 1 2 0v2.75A3.25 3.25 0 0 1 18.75 22H16a1 1 0 1 1 0-2zM7 7h3v3H7zm7 3h-4v4H7v3h3v-3h4v3h3v-3h-3zm0 0V7h3v3z",
+      },
+    ],
+    class: "size-6 text-slate-600",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    stroke: "currentColor",
+  },
+  mediaCast: {
+    paths: [
+      {
+        d: "M2 26h3a3 3 0 0 0-3-3zm7 0H7a5.006 5.006 0 0 0-5-5v-2a7.01 7.01 0 0 1 7 7", // Première partie du chemin
+      },
+      {
+        d: "M13 26h-2a9.01 9.01 0 0 0-9-9v-2a11.013 11.013 0 0 1 11 11", // Deuxième partie du chemin
+      },
+      {
+        d: "M28 26H15v-2h13V8H4v5H2V8a2 2 0 0 1 2-2h24a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2", // Troisième partie du chemin
+      },
+    ],
+    class: "size-6 text-slate-600",
+    viewBox: "0 0 32 32",
+    fill: "none",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    stroke: "currentColor",
+  },
+  time: {
+    paths: [
+      {
+        d: "m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018",
+      },
+      {
+        d: "M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1",
+      },
+    ],
+    class: "size-6 text-slate-600",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    stroke: "currentColor",
+  },
+  review: {
+    paths: [
+      {
+        d: "m16 8l1.912 3.703l4.088.594L19 15l1 4l-4-2.25L12 19l1-4l-3-2.703l4.2-.594z",
+      },
+      {
+        d: "M17.736 30L16 29l4-7h6a1.997 1.997 0 0 0 2-2V8a1.997 1.997 0 0 0-2-2H6a1.997 1.997 0 0 0-2 2v12a1.997 1.997 0 0 0 2 2h9v2H6a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4h-4.835Z",
+      },
+    ],
+    class: "size-6 text-slate-600",
+    viewBox: "0 0 32 32",
+    fill: "none",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    stroke: "currentColor",
+  },
   chartPie: {
     paths: [
       {
@@ -440,7 +508,7 @@ export const Icons = {
         d: "M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z",
       },
     ],
-    class: "shrink-0 size-6 text-teal-600",
+    class: "shrink-0 size-6 text-yellow-600",
     viewBox: "0 0 24 24",
     fill: "none",
     strokeWidth: "1.5",

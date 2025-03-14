@@ -4,19 +4,19 @@ import FeatureCard from "@common/FeatureCard.astro";
 import Button from "@ui/Button.astro";
 
 // Content for the section title and subtitle
-const title = "Turn Historical Data into Tomorrow's Decisions";
-const subTitle =
-  "Leverage advanced statistics and ML to uncover hidden patterns in your data. Make confident decisions backed by proven forecasting models. Our predictive engine analyzes thousands of data points to help you anticipate market changes and stay ahead of the competition.";
+const title = "Comment ça marche ?";
+/* const subTitle =
+"Leverage advanced statistics and ML to uncover hidden patterns in your data. Make confident decisions backed by proven forecasting models. Our predictive engine analyzes thousands of data points to help you anticipate market changes and stay ahead of the competition.";*/
 
 // Call-to-action configuration for the tertiary button
-const tertiaryCTA = { text: "Learn More", href: "#" };
+const tertiaryCTA = { text: "En savoir plus", href: "contact" };
 ---
 
 <section
   class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20"
 >
   <div
-    class="relative isolate overflow-hidden rounded-3xl bg-teal-400 px-6 pt-16 shadow-xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
+    class="relative isolate overflow-hidden rounded-3xl bg-yellow-400 px-6 pt-16 shadow-xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
   >
     {/* Background Circle SVG */}
     <svg
@@ -32,8 +32,8 @@ const tertiaryCTA = { text: "Learn More", href: "#" };
         fill-opacity="0.7"></circle>
       <defs>
         <radialGradient id="gradient_2">
-          <stop offset="0" stop-color="#087F7F"></stop>
-          <stop offset="1" stop-color="#087F7F"></stop>
+          <stop offset="0" stop-color="#F3A712"></stop>
+          <stop offset="1" stop-color="#F3A712"></stop>
         </radialGradient>
       </defs>
     </svg>
@@ -47,9 +47,9 @@ const tertiaryCTA = { text: "Learn More", href: "#" };
       >
         {title}
       </h2>
-      <p class="mt-6 text-pretty text-lg/8 text-slate-700">
+				{/*<p class="mt-6 text-pretty text-lg/8 text-slate-700">
         {subTitle}
-      </p>
+				</p>*/}
       <div
         class="mt-10 flex items-center justify-start gap-x-6 sm:justify-center lg:justify-start"
       >
@@ -68,16 +68,15 @@ const tertiaryCTA = { text: "Learn More", href: "#" };
       {/* First Feature Card */}
 
       <FeatureCard
-        icon="dataBase"
-        description="Clean, organize, and prepare raw data for analysis."
-        styleClass=""
-      />
+        icon="qrCode"
+        description="Le guide partage un QR code pour synchroniser tous les appareils connectés."
+        styleClass="" />
 
       {/* First beam line SVG connecting feature cards visually */}
 
       <svg
-        class="line-connector absolute z-0 hidden w-1/2 xl:left-[10%] xl:top-[25%] xl:block"
-        viewBox="0 0 200 300"
+        class="line-connector absolute z-0 hidden w-1/2 xl:left-[5%] xl:top-[3%] xl:block"
+        viewBox="0 0 150 150"
       >
         <path
           class="base-line"
@@ -96,16 +95,16 @@ const tertiaryCTA = { text: "Learn More", href: "#" };
 
       {/* Second Feature Card */}
       <FeatureCard
-        icon="brain"
-        description="Use statistical models to identify key patterns and trends."
-        styleClass="self-center"
+        icon="time"
+        description="La visite démarre, chaque action est diffusée en temps réel."
+        styleClass="ml-35"
       />
 
       {/* Second beam line SVG connecting feature cards visually */}
 
       <svg
-        class="line-connector absolute hidden w-1/2 xl:left-[70%] xl:top-[55%] xl:block"
-        viewBox="0 0 200 300"
+        class="line-connector absolute hidden w-1/2 xl:left-[50%] xl:top-[36%] xl:block"
+        viewBox="0 0 150 150"
       >
         <path
           class="base-line"
@@ -124,10 +123,40 @@ const tertiaryCTA = { text: "Learn More", href: "#" };
 
       {/* Third Feature Card */}
       <FeatureCard
-        icon="lightbulb"
-        description="Convert insights into visuals and actionable decisions."
-        styleClass="self-end"
+        icon="mediaCast"
+        description="Documents et images s'affichent automatiquement sur l'écran des visiteurs."
+        styleClass="ml-70"
       />
+
+			{/* Third beam line SVG connecting feature cards visually */}
+
+      <svg
+        class="line-connector absolute z-0 hidden w-1/2 xl:left-[40%] xl:top-[57%] xl:block"
+        viewBox="0 0 150 150"
+      >
+        <path
+          class="base-line"
+          d="M1 0.5V50C1 63.8071 12.1929 75 26 75H70"
+          stroke="#F4F9FF"
+          stroke-width="1"
+          fill="transparent"></path>
+
+        <path
+          class="beam-line"
+          d="M1 0.5V50C1 63.8071 12.1929 75 26 75H70"
+          stroke="#5AAEAE"
+          stroke-width="1"
+          fill="transparent"></path>
+      </svg>
+
+
+      {/* Fourth Feature Card */}
+      <FeatureCard
+        icon="review"
+        description="En fin de parcours, les utilisateurs peuvent laisser leurs avis pour améliorer l'expérience."
+        styleClass="ml-90"
+      />
+
     </div>
   </div>
 </section>

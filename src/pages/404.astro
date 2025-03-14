@@ -11,35 +11,8 @@ export const pageContent = {
   goBackLabel: "Go back",
 };
 
-const resources = [
-  {
-    title: "Knowledge Base",
-    description: "Find answers to common questions.",
-    icon: "info",
-    link: "/support/knowledge-base",
-  },
-  {
-    title: "Articles",
-    description: "Explore insights and best practices.",
-    icon: "articles",
-    link: "/support/articles",
-  },
-  {
-    title: "Whitepapers",
-    description: "Read in-depth technical reports.",
-    icon: "blankDocument",
-    link: "/support/whitepapers",
-  },
-  {
-    title: "Reference",
-    description: "Browse technical documentation.",
-    icon: "documentMagnifyingGlass",
-    link: "/support/reference",
-  },
-];
-
 const seo = {
-  title: "Page Not Found - DataNova",
+  title: "Page Not Found - BeeVisiting",
   description:
     "Sorry, we couldn't find the page you're looking for. Explore our resources or go back to the homepage.",
 };
@@ -68,7 +41,7 @@ const schema: WithContext<Thing> = {
     class="grid min-h-full place-items-center px-6 pb-10 pt-32 sm:pt-48 lg:px-8"
   >
     <div class="text-center">
-      <p class="text-xl font-semibold text-teal-600">
+      <p class="text-xl font-semibold text-yellow-600">
         {pageContent.errorCode}
       </p>
       <h1
@@ -83,38 +56,7 @@ const schema: WithContext<Thing> = {
       </p>
     </div>
 
-    <div class="mx-auto w-full px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-      <div class="mx-auto w-full max-w-lg px-4 sm:px-6 lg:px-8">
-        <ul class="divide-y divide-dashed divide-slate-300">
-          {
-            resources.map((resource) => (
-              <li>
-                <a
-                  href={resource.link}
-                  class="group flex gap-x-5 px-2 py-8 transition hover:bg-slate-100"
-                >
-                  <Icon name={resource.icon} class="size-6 text-teal-600" />
-                  <div class="grow">
-                    <h3 class="font-semibold text-slate-600 transition group-hover:text-teal-700">
-                      {resource.title}
-                    </h3>
-                    <p class="mt-1 text-slate-500">{resource.description}</p>
-                  </div>
-                  <Icon
-                    name="chevronRight"
-                    class="self-center text-slate-400 transition"
-                  />
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div class="mt-5 flex items-center justify-center">
-        <Button id="go-back" variant="primary">{pageContent.goBackLabel}</Button
-        >
-      </div>
-    </div>
+    
   </section>
 
   <script>
