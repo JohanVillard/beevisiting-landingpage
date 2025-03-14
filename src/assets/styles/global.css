@@ -26,18 +26,17 @@
   --color-slate-900: oklch(0.208 0.042 50);
   --color-slate-950: oklch(0.129 0.042 50);
 
-  /* Palette du blanc au jaune pétant */
-  --color-yellow-50: #ffffe7;
-  --color-yellow-100: #ffffc1;
-  --color-yellow-200: #fffb86;
-  --color-yellow-300: #fff141;
-  --color-yellow-400: #ffeb3b;
-  --color-yellow-500: #ffd200;
-  --color-yellow-600: #d19a00;
-  --color-yellow-700: #f3a712;
-  --color-yellow-800: #f3a712;
-  --color-yellow-900: #f3a712;
-  --color-yellow-950: #f3a712;
+  --color-yellow-50: #fffff0; /* Blanc cassé */
+  --color-yellow-100: #fff9c4; /* Jaune pastel très clair */
+  --color-yellow-200: #fff176; /* Jaune doux */
+  --color-yellow-300: #ffe033; /* Jaune moyen */
+  --color-yellow-400: #ffcc00; /* Jaune doré */
+  --color-yellow-500: #ffb300; /* Jaune soutenu */
+  --color-yellow-600: #ff9800; /* Jaune orangé */
+  --color-yellow-700: #f57c00; /* Jaune foncé */
+  --color-yellow-800: #e65100; /* Ocre */
+  --color-yellow-900: #bf360c; /* Brun-orangé foncé */
+  --color-yellow-950: #8f2a06; /* Presque marron */
 
   /* Polices de caractères */
   --font-dm-sans: "DM Sans", sans-serif;

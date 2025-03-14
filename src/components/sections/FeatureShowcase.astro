@@ -4,6 +4,7 @@ import image_1 from "@images/toolbar.webp";
 import image_2 from "@images/graph.webp";
 import image_3 from "@images/dashboard.webp";
 import mobileImage from "../../assets/images/Screenshot_2025-03-14-13-59-24-93_e3f67eec9fec57324aba7bab4c582db7.jpg"
+import connectivityImage from "../../assets/images/connectivity.jpg"
 
 // Content for the section title and subtitle
 const title = `<span class="text-yellow-700">Data</span><span class="font-normal text-slate-400">Nova</span>'s Powerful Analytics Suite`;
@@ -33,18 +34,18 @@ const features = [
     title: "Une plateforme adaptée à tous les sites",
     description:
       "Beevisiting fonctionne même en zones à faible connexion. Que votre événement se déroule en intérieur ou en extérieur, l’expérience reste optimale pour chaque utilisateur.",
-    image: mobileImage,
+    image: connectivityImage,
     class:
       "content-center border-t border-dashed border-slate-400 py-5 sm:row-span-2 sm:row-start-2 sm:border-l sm:border-t-0 sm:p-5 sm:text-right",
-    alignment: "ml-auto mr-auto mt-10 w-[80%] rounded-xl shadow-lg sm:mr-0",
+		alignment: "ml-auto mr-auto mt-10 w-[80%] rounded-xl shadow-lg border border-[rgba(148,163,184,0.5)] dark:border-[rgba(71,85,105,0.5)] sm:mr-0",
   },
   {
     title: "Des données en temps réel",
     description: "Visualisez et synchronisez instantanément chaque étape de la visite. Documents, images, vidéos : tout est mis à jour en direct.",
-    image: mobileImage, // Vous pouvez utiliser une nouvelle image ou une image existante
-    class: "content-center py-5 sm:p-5", // Classe CSS (personnalisation)
-    alignment: "mx-auto mt-10 w-[60%] rounded-xl shadow-lg", // Alignement de l'image
-  },
+		image: mobileImage, 
+		class: "content-center py-5 sm:p-5",
+		alignment: "mx-auto mt-10 w-[60%] rounded-xl shadow-lg",
+	},
 	/*{
     title: "Une interface personnalisable",
     description:
@@ -65,7 +66,7 @@ const features = [
     title: "Une expérience optimisée pour tous",
     class: "content-center border-t border-dashed border-slate-400 py-5 sm:p-5",
     moreFeatures: [
-      "Visiteurs : Immersion interactive, consultation du sommaire, carrousel d'images, avis en fin de parcours. ",
+		"Visiteurs : Immersion interactive, consultation du sommaire, carrousel d'images, avis en fin de parcours. ",
       "Guides : Présentation dynamique, flexibilité des supports, ajout d'invités en cours de route.",
       "Administrateurs : Gestion des utilisateurs, création de visites variées, ajout de contenus multimédia.",
       "Create custom reports that tell your data's story exactly how you want",
