@@ -1,7 +1,7 @@
 import { a as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead, u as unescapeHTML, e as addAttribute } from '../../chunks/astro/server_uCupZySs.mjs';
 import 'kleur/colors';
 import { $ as $$BaseLayout } from '../../chunks/BaseLayout_D95iAZhZ.mjs';
-import { a as getCollection } from '../../chunks/_astro_content_B9icSbUI.mjs';
+import { a as getCollection } from '../../chunks/_astro_content_CyrgJjwT.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const pageContent = {

@@ -3,7 +3,7 @@ import 'kleur/colors';
 import { $ as $$BaseLayout } from '../../../chunks/BaseLayout_D95iAZhZ.mjs';
 import { $ as $$Icon } from '../../../chunks/Icon_CIvfUVLh.mjs';
 import { g as getReadingTime, f as formatDate } from '../../../chunks/reading-time_w2egzHqq.mjs';
-import { g as getEntry, r as renderEntry } from '../../../chunks/_astro_content_B9icSbUI.mjs';
+import { g as getEntry, r as renderEntry } from '../../../chunks/_astro_content_CyrgJjwT.mjs';
 export { renderers } from '../../../renderers.mjs';
 
 const $$Astro = createAstro("https://data-nova.vercel.app");
