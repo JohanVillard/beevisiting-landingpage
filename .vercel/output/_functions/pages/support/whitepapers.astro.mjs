@@ -2,7 +2,7 @@ import { a as createComponent, r as renderComponent, b as renderTemplate, m as m
 import 'kleur/colors';
 import { $ as $$BaseLayout } from '../../chunks/BaseLayout_D95iAZhZ.mjs';
 import { $ as $$Icon } from '../../chunks/Icon_CIvfUVLh.mjs';
-import { a as getCollection } from '../../chunks/_astro_content_CyrgJjwT.mjs';
+import { a as getCollection } from '../../chunks/_astro_content_B9icSbUI.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const pageContent = {

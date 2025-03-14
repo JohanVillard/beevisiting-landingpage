@@ -343,7 +343,7 @@ async function renderEntry(entry) {
   }
   if (entry.deferredRender) {
     try {
-      const { default: contentModules } = await import('./content-modules_BxJnFITV.mjs');
+      const { default: contentModules } = await import('./content-modules_Du7C3mcr.mjs');
       const renderEntryImport = contentModules.get(entry.filePath);
       return render({
         collection: "",
