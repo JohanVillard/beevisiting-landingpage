@@ -16,7 +16,6 @@ interface Props {
 
 // Extract `seo` and `schema` from properties or define defaults
 const { seo, schema } = Astro.props;
-const socialImage = `${Astro.site}social.png`; // Path to the default social sharing image
 
 // Define default JSON-LD Schema.org data if no schema is passed
 const defaultSchema: WithContext<Thing> = {
