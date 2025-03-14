@@ -1,0 +1,73 @@
+---
+import BaseLayout from "@layout/BaseLayout.astro";
+import Icon from "@ui/icons/Icon.astro";
+import Button from "@ui/Button.astro";
+import type { WithContext, Thing } from "schema-dts";
+
+export const pageContent = {
+  errorCode: "404",
+  title: "This page does not exist",
+  description: "Sorry, we couldn't find the page you're looking for.",
+  goBackLabel: "Go back",
+};
+
+const seo = {
+  title: "Page Not Found - BeeVisiting",
+  description:
+    "Sorry, we couldn't find the page you're looking for. Explore our resources or go back to the homepage.",
+};
+
+const schema: WithContext<Thing> = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  inLanguage: "en-US",
+  "@id": Astro.url.href,
+  url: Astro.url.href,
+  name: "Page Not Found",
+  description:
+    "Sorry, we couldn't find the page you're looking for. Explore our resources or go back to the homepage.",
+  isPartOf: {
+    "@type": "WebSite",
+    url: `${Astro.site}`,
+    name: "DataNova",
+    description:
+      "DataNova Analytics Inc. provides advanced analytics for Excel to help businesses unlock actionable insights quickly with no coding required.",
+  },
+};
+---
+
+<BaseLayout seo={seo} schema={schema}>
+  <section
+    class="grid min-h-full place-items-center px-6 pb-10 pt-32 sm:pt-48 lg:px-8"
+  >
+    <div class="text-center">
+      <p class="text-xl font-semibold text-yellow-600">
+        {pageContent.errorCode}
+      </p>
+      <h1
+        class="mt-4 text-balance text-4xl text-slate-800 sm:text-5xl md:text-6xl lg:text-7xl"
+      >
+        {pageContent.title}
+      </h1>
+      <p
+        class="mt-6 text-pretty text-lg font-medium text-slate-500 sm:text-xl/8"
+      >
+        {pageContent.description}
+      </p>
+    </div>
+
+    
+  </section>
+
+  <script>
+    document.addEventListener("astro:page-load", async () => {
+      const goBackButton = document.getElementById(
+        "go-back",
+      ) as HTMLButtonElement;
+
+      goBackButton.addEventListener("click", () => {
+        history.back();
+      });
+    });
+  </script>
+</BaseLayout>
