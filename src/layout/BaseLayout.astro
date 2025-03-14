@@ -7,6 +7,7 @@ import { Schema } from "astro-seo-schema";
 import type { WithContext, Thing } from "schema-dts";
 import { AstroFont } from "astro-font";
 import "@styles/global.css";
+import favicon from "../assets/images/favicon-beevisiting.ico"
 
 interface Props {
   seo?: SEOProps; // Optional SEO properties to customize meta tags
@@ -42,31 +43,28 @@ const defaultSchema: WithContext<Thing> = {
     {/* SEO Meta Tags */}
     <SEO
       charset="utf-8"
-      title={seo?.title ?? "DataNova"}
+      title={seo?.title ?? "BeeVisiting"}
       description={seo?.description ??
-        "Unlock powerful data insights with DataNova's advanced analytics suite for Excel. Visualize, analyze, and make data-driven decisions in minutes with seamless Excel integration, AI-powered analysis, and predictive forecasting models."}
+			"BeeVisiting, l'application de visite guidée interactive"}
       openGraph={{
         basic: {
-          title: "DataNova - Unlock Insights from Your Excel Data",
+          title: "BeeVisiting, l'application de visite guidée interactive",
           type: "website",
-          image: socialImage,
+          image: favicon,
         },
-        optional: {
-          description:
-            "Transform your Excel workspace with DataNova's powerful analytics suite. Get insights, predictive models, and visualizations in minutes with no coding required.",
-        },
+        optional: {},
       }}
       twitter={{
         card: "summary_large_image",
-        title: "DataNova - Unlock Insights from Your Excel Data",
+        title: "BeeVisiting, l'application de visite guidée interactive",
         description:
-          "Transform your Excel workspace with DataNova's powerful analytics suite. Visualize and analyze data quickly with no coding required.",
-        image: socialImage,
-        imageAlt: "DataNova Logo.",
+          "BeeVisiting, l'application de visite guidée interactive",
+        image: favicon,
+        imageAlt: "BeeVisiting Logo.",
       }}
       extend={{
         link: [
-          { rel: "icon", href: "/icon.svg", type: "image/svg+xml" },
+          { rel: "icon", href: favicon, type: "image/svg+xml" },
           { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
           { rel: "manifest", href: "/manifest.webmanifest" },
         ],
