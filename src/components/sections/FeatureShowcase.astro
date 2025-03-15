@@ -1,8 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import mobileImage from "../../assets/images/Screenshot_2025-03-14-13-59-24-93_e3f67eec9fec57324aba7bab4c582db7.jpg"
-import connectivityImage from "../../assets/images/connectivity.jpg"
-
+import loginMobileImage from "../../assets/images/beevisiting-login-mobile.jpg"
+import connectivityImage from "../../assets/images/connectivity.jpg";
+import visitAdminImage from "../../assets/images/beevisiting-admin-visits.png";
+import enLightModeImage from "../../assets/images/beevisiting-en-light-login.jpg";
+import hlbtnLightGuideStartImage from "../../assets/images/holbertion-light-guide-start.jpg"
+import mediaImage from "../../assets/images/beevisiting-medias.webp";
 
 // Features list for displaying the key highlights
 
@@ -11,7 +14,7 @@ const features = [
     title: "Une visite interactive et immersive", // Feature title
     description:
       "Vos visiteurs vivent une expérience unique ! Suivez chaque étape en temps réel, accédez à du contenu interactif et visualisez facilement le parcours de la visite.", // Feature description
-    image: mobileImage, // Associated image
+    image: loginMobileImage, // Associated image
     class:
       "content-center border-b border-dashed border-slate-400 py-5 sm:col-span-2 sm:p-5", // Custom CSS classes for layout and styling
     alignment: "mx-auto mt-10 rounded-xl shadow-lg sm:w-[20%]", // Alignment and styling for the image
@@ -19,10 +22,10 @@ const features = [
   {
     title: "Une gestion simplifiée pour les guides",
     description: `Prenez le contrôle total de votre visite ! Programmez les parcours, affichez des visuels en temps réel et ajoutez des participants à la volée. Un outil fiable pour un accompagnement fluide.`,
-    image: mobileImage,
+    image: visitAdminImage,
     class: "content-center py-5 sm:row-start-2 sm:p-5 sm:py-10",
     alignment:
-      "ml-auto mr-auto mt-10 w-[65%] rounded-xl shadow-lg sm:ml-0 sm:w-[45%]",
+      "ml-auto mr-auto mt-10 w-[100%] rounded-xl shadow-lg sm:ml-0 sm:w-[100%] border border-[rgba(148,163,184,0.5)] dark:border-[rgba(71,85,105,0.1)]",
   },
   {
     title: "Une plateforme adaptée à tous les sites",
@@ -31,48 +34,49 @@ const features = [
     image: connectivityImage,
     class:
       "content-center border-t border-dashed border-slate-400 py-5 sm:row-span-2 sm:row-start-2 sm:border-l sm:border-t-0 sm:p-5 sm:text-right",
-		alignment: "ml-auto mr-auto mt-10 w-[80%] rounded-xl shadow-lg border border-[rgba(148,163,184,0.5)] dark:border-[rgba(71,85,105,0.5)] sm:mr-0",
+		alignment: "ml-auto mr-auto mt-10 w-[100%] rounded-xl shadow-lg border border-[rgba(148,163,184,0.5)] dark:border-[rgba(71,85,105,0.2)] sm:mr-0",
   },
   {
     title: "Des données en temps réel",
     description: "Visualisez et synchronisez instantanément chaque étape de la visite. Documents, images, vidéos : tout est mis à jour en direct.",
-		image: mobileImage, 
+		image: mediaImage, 
 		class: "content-center py-5 sm:p-5",
 		alignment: "mx-auto mt-10 w-[60%] rounded-xl shadow-lg",
 	},
-	/*{
+	{
     title: "Une interface personnalisable",
     description:
       "Administrateurs, adaptez la plateforme à votre image ! Ajoutez votre logo, choisissez vos couleurs.",
-    image: image_3,
+    image: hlbtnLightGuideStartImage,
     class:
-      "content-center border-t border-dashed border-slate-400 py-5 sm:row-span-2 sm:row-start-2 sm:border-l sm:border-t-0 sm:p-5 sm:text-right",
-    alignment: "ml-auto mr-auto mt-10 w-[75%] rounded-xl shadow-lg sm:mr-0",
-  },
+      "content-center py-5 sm:border-r border-dashed border-slate-400 sm:row-span-5 sm:p-5 sm:text-left",
+    alignment: "ml-auto mr-auto mt-10 w-[60%] rounded-xl shadow-lg border border-[rgba(148,163,184,0.5)] dark:border-[rgba(71,85,105,0.15)]",
+		},
   {
     title: "Accessibilité et flexibilité",
     description: "Affichage personnalisable avec choix de langue (français, anglais, espagnol), mode sombre activable pour un meilleur confort visuel et accès à la visite aussi bien sur site qu'à distance.",
-    image: image_1, // Vous pouvez utiliser une nouvelle image ou une image existante
-    class: "content-center py-5 sm:p-5", // Classe CSS (personnalisation)
-    alignment: "mx-auto mt-10 w-[60%] rounded-xl shadow-lg", // Alignement de l'image
-		},*/
+    image: enLightModeImage, // Vous pouvez utiliser une nouvelle image ou une image existante
+    class: "content-center py-5 sm:border-l border-dashed border-slate-400 sm:p-5 sm:text-right", // Classe CSS (personnalisation)
+		alignment: "mx-auto mt-10 w-[60%] rounded-xl shadow-2xl border border-[rgba(148,163,184,0.5)] dark:border-[rgba(71,85,105,0.15)]",
+     // Alignement de l'image
+		},
   {
     title: "Une expérience optimisée pour tous",
-    class: "content-center border-t border-dashed border-slate-400 py-5 sm:p-5",
+    class: "content-center border-t border-dashed border-slate-400 py-5 sm:p-5 sm:col-span-2",
     moreFeatures: [
 		"Visiteurs : Immersion interactive, consultation du sommaire, carrousel d'images, avis en fin de parcours. ",
       "Guides : Présentation dynamique, flexibilité des supports, ajout d'invités en cours de route.",
       "Administrateurs : Gestion des utilisateurs, création de visites variées, ajout de contenus multimédia.",
       "Create custom reports that tell your data's story exactly how you want",
     ],
-  },
+		},
 ];
 ---
 
 <div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20">
   
   <div
-    class="mx-auto grid max-w-[85rem] px-4 pb-10 sm:grid-cols-2 sm:grid-rows-3 sm:px-6 lg:px-8 lg:pb-14"
+    class="mx-auto grid max-w-[85rem] px-4 pb-10 sm:grid-cols-2 sm:grid-rows-5 sm:px-6 lg:px-8 lg:pb-14"
   >
     {
       features.map((feature) => (
