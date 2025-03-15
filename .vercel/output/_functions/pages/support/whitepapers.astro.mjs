@@ -1,8 +1,8 @@
 import { a as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead, e as addAttribute } from '../../chunks/astro/server_uCupZySs.mjs';
 import 'kleur/colors';
-import { $ as $$BaseLayout } from '../../chunks/BaseLayout_D95iAZhZ.mjs';
-import { $ as $$Icon } from '../../chunks/Icon_CIvfUVLh.mjs';
-import { a as getCollection } from '../../chunks/_astro_content_B9icSbUI.mjs';
+import { $ as $$BaseLayout } from '../../chunks/BaseLayout_DjpioE5M.mjs';
+import { $ as $$Icon } from '../../chunks/Icon_C5Btcv1r.mjs';
+import { a as getCollection } from '../../chunks/_astro_content_iMoTbqu2.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const pageContent = {
@@ -20,9 +20,9 @@ const $$Whitepapers = createComponent(async ($$result, $$props, $$slots) => {
     const borderBottom = isLastRow ? "" : "border-b";
     return renderTemplate`<div${addAttribute(`border-dashed border-slate-300 p-6 ${borderRight} ${borderBottom} flex flex-col justify-between`, "class")}> <div> <h2 class="text-lg font-semibold text-slate-700"> ${paper.data.title} </h2> <p class="mt-4 text-slate-700">${paper.data.description}</p> </div> <div class="mt-auto"> ${paper.data.readLink && renderTemplate`<a${addAttribute(paper.data.readLink, "href")} target="_blank" class="group mr-6 mt-6 inline-flex items-center border-b-2 border-slate-500 pb-1 text-sm font-medium text-slate-700 transition-colors duration-300 hover:border-teal-500 hover:text-slate-500 focus:outline-hidden focus:ring-2 focus:ring-teal-400"> ${pageContent.actionLabel} ${renderComponent($$result2, "Icon", $$Icon, { "name": "newWindow", "class": "ms-2 size-4 text-slate-900 transition duration-300 group-hover:text-slate-600" })} </a>`} ${paper.data.btnLink && renderTemplate`<a${addAttribute(paper.data.btnLink, "href")} download class="mt-6 inline-flex items-center rounded-md bg-teal-700 px-4 py-2 text-sm font-medium text-white shadow-xs transition-colors duration-300 hover:bg-teal-700/80 focus:outline-hidden focus:ring-2 focus:ring-teal-400"> ${paper.data.btnTitle} </a>`} </div> </div>`;
   })} </div> </section> ` })}`;
-}, "/home/johan/Repository/beevisiting-landingpage/src/pages/support/whitepapers.astro", void 0);
+}, "/home/johan/Repository/holberton-beevisiting-landingpage/src/pages/support/whitepapers.astro", void 0);
 
-const $$file = "/home/johan/Repository/beevisiting-landingpage/src/pages/support/whitepapers.astro";
+const $$file = "/home/johan/Repository/holberton-beevisiting-landingpage/src/pages/support/whitepapers.astro";
 const $$url = "/support/whitepapers";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

@@ -1,91 +1,107 @@
 {
-	"version": 3,
-	"routes": [
-		{
-			"src": "^/(.*)/$",
-			"headers": {
-				"Location": "/$1"
-			},
-			"status": 308
-		},
-		{
-			"handle": "filesystem"
-		},
-		{
-			"src": "^/_astro/(.*)$",
-			"headers": {
-				"cache-control": "public, max-age=31536000, immutable"
-			},
-			"continue": true
-		},
-		{
-			"src": "^/_server-islands/([^/]+?)$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/_image$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/404$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/api/feedback$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/api/keystatic(?:/(.*?))?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/contact$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/keystatic(?:/(.*?))?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/robots\\.txt/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/support/articles/([^/]+?)$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/support/articles$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/support/knowledge-base$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/support/reference/([^/]+?)$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/support/reference$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/support/sample-spreadsheets$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/support/whitepapers$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/.*$",
-			"dest": "_render",
-			"status": 404
-		}
-	]
+  "version": 3,
+  "routes": [
+    {
+      "src": "^/(.*)/$",
+      "headers": {
+        "Location": "/$1"
+      },
+      "status": 308
+    },
+    {
+      "handle": "error"
+    },
+    {
+      "status": 404,
+      "src": "^(?!/api).*$",
+      "dest": "/404.html"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "^/_astro/(.*)$",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "continue": true
+    },
+    {
+      "src": "^/_server-islands/([^/]+?)$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/_image$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/404$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/about$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/api/feedback$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/api/keystatic(?:/(.*?))?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/contact$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/keystatic(?:/(.*?))?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/robots\\.txt/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/support/articles/([^/]+?)$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/support/articles$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/support/knowledge-base$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/support/reference/([^/]+?)$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/support/reference$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/support/sample-spreadsheets$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/support/whitepapers$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/$",
+      "dest": "_render"
+    },
+    {
+      "src": "^/.*$",
+      "dest": "_render",
+      "status": 404
+    }
+  ],
+  "framework": {
+    "version": "5.4.2"
+  },
+  "crons": []
 }

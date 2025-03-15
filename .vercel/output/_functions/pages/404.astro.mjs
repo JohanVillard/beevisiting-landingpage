@@ -1,6 +1,6 @@
 import { c as createAstro, a as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead, d as renderScript } from '../chunks/astro/server_uCupZySs.mjs';
 import 'kleur/colors';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_D95iAZhZ.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_DjpioE5M.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro = createAstro("https://data-nova.vercel.app");
@@ -32,10 +32,10 @@ const $$404 = createComponent(($$result, $$props, $$slots) => {
       description: "DataNova Analytics Inc. provides advanced analytics for Excel to help businesses unlock actionable insights quickly with no coding required."
     }
   };
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "seo": seo, "schema": schema }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="grid min-h-full place-items-center px-6 pb-10 pt-32 sm:pt-48 lg:px-8"> <div class="text-center"> <p class="text-xl font-semibold text-yellow-600"> ${pageContent.errorCode} </p> <h1 class="mt-4 text-balance text-4xl text-slate-800 sm:text-5xl md:text-6xl lg:text-7xl"> ${pageContent.title} </h1> <p class="mt-6 text-pretty text-lg font-medium text-slate-500 sm:text-xl/8"> ${pageContent.description} </p> </div> </section> ${renderScript($$result2, "/home/johan/Repository/beevisiting-landingpage/src/pages/404.astro?astro&type=script&index=0&lang.ts")} ` })}`;
-}, "/home/johan/Repository/beevisiting-landingpage/src/pages/404.astro", void 0);
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "seo": seo, "schema": schema }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="grid min-h-full place-items-center px-6 pb-10 pt-32 sm:pt-48 lg:px-8"> <div class="text-center"> <p class="text-xl font-semibold text-yellow-600"> ${pageContent.errorCode} </p> <h1 class="mt-4 text-balance text-4xl text-slate-800 sm:text-5xl md:text-6xl lg:text-7xl"> ${pageContent.title} </h1> <p class="mt-6 text-pretty text-lg font-medium text-slate-500 sm:text-xl/8"> ${pageContent.description} </p> </div> </section> ${renderScript($$result2, "/home/johan/Repository/holberton-beevisiting-landingpage/src/pages/404.astro?astro&type=script&index=0&lang.ts")} ` })}`;
+}, "/home/johan/Repository/holberton-beevisiting-landingpage/src/pages/404.astro", void 0);
 
-const $$file = "/home/johan/Repository/beevisiting-landingpage/src/pages/404.astro";
+const $$file = "/home/johan/Repository/holberton-beevisiting-landingpage/src/pages/404.astro";
 const $$url = "/404";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

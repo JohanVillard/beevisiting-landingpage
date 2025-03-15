@@ -1,0 +1,233 @@
+---
+import BaseLayout from "@layout/BaseLayout.astro";
+import type { WithContext, Thing } from "schema-dts";
+import Icon from "@ui/icons/Icon.astro";
+
+
+// Data describing the "About" section content
+const aboutData = {
+  title: "BeeVisiting,",
+  description:
+	"Au fil des mois, ce projet a évolué avec l'intégration de fonctionnalités passionnantes et la collaboration avec mon collègue Jérémy. Voici un aperçu des différentes étapes qui ont marqué l’avancée de notre projet, depuis la préparation de l’application de bureau jusqu’à la refonte de l’application mobile.",
+  statistics: [
+    {
+      label: "Phases clés",
+      value: "5",
+    },
+    {
+      label: "Applications",
+      value: "2",
+    },
+    {
+      label: "Jours de travail intense",
+      value: "35",
+    },
+  ],
+};
+
+// Data describing the sprint section
+const sprintData = {
+  title: "Les phases:",
+  sprint: [
+    {
+      title: "Phase 1 : Préparation et initialisation (1er – 14 décembre 2024):",
+      description:
+        "Avec Jérémy, nous avons commencé par installer l'environnement de développement et définir l'architecture du projet. Un travail essentiel pour poser les bases solides du projet. Durant cette phase, nous avons également planifié l’intégration d’un module de thèmes dynamiques, et créé une API pour gérer les instances et les sites. Tout était mis en place pour une suite fluide et structurée.",
+    },
+    {
+      title: "Phase 2 : Développement du backend et des API (15 – 28 décembre 2024):",
+      description:
+        "Nous avons concentré nos efforts sur le développement des API permettant de gérer les sites, les zones et les cycles de produits. Une attention particulière a été portée à la mise en place d’un système de validation robuste et d’un mécanisme de suppression en cascade. Cette phase a également marqué le début de l’intégration du module de thèmes dynamiques, une fonctionnalité clé pour personnaliser l’apparence des instances selon les besoins.",
+    },
+    {
+      title: "Phase 3 : Intégration frontend et validation utilisateur (29 décembre 2024 – 7 janvier 2025):",
+      description:
+        "Avec l'API prête à l'emploi, nous avons relié le frontend pour pouvoir gérer les instances, tout en intégrant les thèmes dynamiques. En parallèle, nous avons mis l'accent sur l'amélioration de l'expérience utilisateur, en réglant des problèmes de navigation pour rendre l’application plus fluide et agréable.",
+		},
+		{
+      title: "Phase 4 : Analyse et conception de l’application mobile (7 – 20 janvier 2025):",
+      description:
+        "Une nouvelle étape a débuté avec l’analyse des besoins pour mettre à jour l’application mobile. Cette phase s’est avérée plus longue que prévu, car il a fallu reconstruire entièrement l’application et revoir les bibliothèques utilisées. Cela nous a permis d’adapter l’application aux nouvelles exigences, mais a nécessité un travail supplémentaire pour garantir la qualité.",
+		},
+		{
+      title: "Phase 5 : Développement du backend mobile (22 janvier – 4 février 2025):",
+      description:
+        "Avec l'application mobile en refonte, nous avons travaillé sur l'implémentation de nouvelles API pour gérer les instances de manière sécurisée. Un travail important a été réalisé pour ajouter des mécanismes de mise en cache et de nettoyage des données locales, afin d’optimiser la navigation de l’application mobile et offrir une meilleure réactivité aux utilisateurs.",
+		},
+		{
+      title: "Phase 6 : Intégration frontend et application du thème dynamique (4 – 17 février 2025):",
+      description:
+        "Une fois les API mises en place, nous avons connecté le frontend de l’application mobile pour une synchronisation des données en temps réel. Nous avons appliqué le thème dynamique, mais après une première version, nous avons ajusté les couleurs pour correspondre plus fidèlement aux designs originaux. Nous avons également ajouté la possibilité de basculer entre un thème clair et un thème sombre, pour encore plus de personnalisation.",
+    },
+  ],
+};
+
+const team = [
+	{
+		fullName: "Johan Villard",
+		job: "Student at Holberton School",
+		linkedin: "http://www.linkedin.com/in/johan-villard-917574305/"
+		},
+		{
+		fullName: "Julien Brossard",
+		job: "President of Beecoming",
+		linkedin: "https://www.linkedin.com/in/julienbrossard/"
+		},
+		{
+		fullName: "Jérémy Grelier",
+		job: "Computer engineer",
+		linkedin: "https://www.linkedin.com/in/jeremy-grelier/"
+		},
+		{
+		fullName: "Antoine Simper",
+		job: "Junior developer",
+		linkedin: "https://www.linkedin.com/in/antoine-simper/"
+		}
+]
+
+// SEO metadata for the page
+const seo = {
+  title: "About DataNova",
+  description: "Learn more about DataNova, the analytics platform that transforms your Excel data with advanced insights and predictive models.",
+};
+
+// Schema.org metadata for SEO
+const schema: WithContext<Thing> = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "inLanguage": "en-US",
+  "@id": Astro.url.href,
+  "url": Astro.url.href,
+  "name": "About DataNova",
+  "description": "Get to know DataNova, the powerful analytics platform for Excel that enables businesses to make data-driven decisions quickly with no coding required.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": `${Astro.site}`,
+    "name": "DataNova",
+    "description": "DataNova Analytics Inc. provides advanced analytics for Excel to help businesses unlock actionable insights quickly with no coding required."
+  }
+};
+---
+
+<BaseLayout seo={seo} schema={schema}>
+  <section class="mx-auto max-w-[85rem] px-4 pb-12 pt-48 sm:px-6 lg:px-8">
+    <div class="max-w-7xl">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h1
+          class="text-balance text-4xl text-slate-800 sm:text-5xl md:text-6xl lg:text-7xl"
+        >
+          {aboutData.title}
+        </h1>
+        <p
+          class="mt-8 text-pretty text-lg font-medium text-slate-700 sm:text-xl/8"
+        >
+          {aboutData.description}
+        </p>
+      </div>
+
+      {/* Statistics Section */}
+      <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+        <dl
+          class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          {
+            aboutData.statistics.map((stat) => (
+              <div class="flex flex-col-reverse gap-1">
+                <dt class="text-base/7 text-slate-700">{stat.label}</dt>
+                <dd class="text-4xl font-semibold tracking-tight text-slate-800">
+                  {stat.value}
+                </dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  {/* Sprint Section */}
+  <section class="mx-auto max-w-[85rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+    <div
+      class="group relative isolate overflow-hidden rounded-3xl bg-yellow-200 p-5 sm:p-11"
+    >
+      <div
+        class="group pointer-events-none absolute inset-0 -top-[10%] h-[120%] w-full rounded-xl bg-linear-to-r/oklch from-yellow-200 to-off-white opacity-0 transition duration-1000 group-hover:opacity-100"
+      >
+      </div>
+      <div class="svgBlock mx-auto max-w-7xl">
+        <h2
+          class="relative text-balance pl-4 text-2xl font-semibold text-slate-800 md:text-3xl md:leading-tight"
+        >
+          {sprintData.title}
+        </h2>
+        <dl
+          class="relative mt-10 grid max-w-xl grid-cols-1 items-start text-base/7 text-slate-600 sm:max-w-none lg:grid-flow-row-dense lg:auto-rows-fr lg:grid-cols-3"
+        >
+          {
+            sprintData.sprint.map((item, index) => (
+							<div
+								class={`
+									px-5 py-5 sm:px-10 lg:py-0 mb-4 mt-4
+									${index === 1 || index === 4 ? "h-full border-y border-dashed border-slate-400 lg:border-x lg:border-y-0" : ""}
+								`}
+							>
+
+                <dt class="text-balance text-lg font-semibold text-slate-600">
+                  {item.title}
+                </dt>
+                <dd class="mt-2 text-pretty text-slate-500">
+                  {item.description}
+                </dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </div>
+  </section>
+
+	{/* Team Section */}
+	<section class="py-12 bg-gray-100">
+		<div class="container mx-auto px-4">
+			<h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">
+				Rencontrer notre équipe
+			</h2>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+				{team.map((member, index) => (
+					<div class="bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center">
+						<p class="text-xl font-bold text-gray-800">{member.fullName}</p>
+						<p class="text-sm text-gray-600">{member.job}</p>
+
+						<div class="mt-4 flex space-x-4">
+							<a 
+								href={member.linkedin} 
+								target="_blank" 
+								rel="noopener noreferrer" 
+								aria-label={`Profil LinkedIn de ${member.fullName}`}
+								class="text-blue-600 hover:text-blue-800 transition duration-300"
+							>
+								<Icon name="linkedin" class="w-8 h-8" />
+							</a>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>	
+
+  <style>
+    .svgBlock::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url(/guilloche.svg);
+      background-repeat: repeat;
+      background-position: right top;
+      background-size: 20px, 20px;
+      opacity: 0.075;
+      background-clip: padding-box;
+      mask-image: linear-gradient(270deg, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    }
+  </style>
+</BaseLayout>
